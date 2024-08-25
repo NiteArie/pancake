@@ -1,0 +1,118 @@
+body {
+  font-family: "Roboto", sans-serif;
+  --red: hsl(0, 70%, 50%);
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero__name {
+  font-family: "Dancing Script", cursive;
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.gallery__wrapper {
+  margin-top: 36px;
+}
+
+.gallery__wrapper > span {
+  color: hsl(240, 10%, 50%);
+  font-size: 12px;
+  display: block;
+  text-align: center;
+}
+
+.gallery {
+  width: 960px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 12px;
+  padding: 12px;
+  grid-template-rows: masonry;
+}
+
+.gallery__image {
+  width: 100%;
+  grid-row: auto / span 1;
+  position: relative;
+}
+
+.image {
+  width: 100%;
+  border-radius: 4px;
+  object-fit: cover;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+.image__note {
+  background-color: rgba(0, 0, 0, 0.5);
+  height: fit-content;
+  line-height: 1.67;
+  color: white;
+  position: absolute;
+  top: 0;
+  padding: 12px;
+  display: none;
+  font-size: 16px;
+}
+
+.image__note--show {
+  display: block;
+}
+
+.quotes {
+  width: 720px;
+}
+
+.quote > p {
+  font-size: 24px;
+  color: var(--red);
+  font-family: "Dancing Script", cursive;
+  margin: 8px 0;
+}
+
+.meta__day {
+  font-family: "Dancing Script", cursive;
+  font-size: 28px;
+  margin: 0;
+}
+
+.meta__counter {
+  font-weight: bold;
+  font-size: 30px;
+  color: var(--red);
+}
+
+q {
+  font-style: italic;
+}
+
+q:before {
+  content: open-quote;
+  color: var(--red);
+  font-size: 36px;
+}
+
+q:after {
+  content: close-quote;
+  font-size: 36px;
+  color: var(--red);
+  position: absolute;
+}
